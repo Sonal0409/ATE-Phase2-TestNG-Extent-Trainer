@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+
+	
+<suite name="Functiontesting" verbose="1">
+	  <!--	 will run tesst with gorup name functional from all tests and all classes -->
+
+		  	  <groups>
+		 <run>
+			  <include name="functional" />		 
+		 </run>
+		 
+	 </groups>
+	
+ <test name="SmokeTesting">
+	 
+	   <!--	 will run test with gorup name smoke only in this test classes. All the other tests it will run suit group name fucntional -->
+
+		  	  <groups>
+		 <run>
+			  <include name="smoke" />		 
+		 </run>
+		 
+	 </groups>
+	 
+  <classes>
+  <class name="com.phase2.TestNGDemo.TestNgDemoGroups"></class> 
+  </classes>
+  
+ </test>
+
+ <test name="RegressionTesting" >
+
+  <classes>
+ 
+  <class name="com.phase2.TestNGDemo.TestNgDemo2Groups"></class>
+  </classes>
+  
+ </test>
+ 
+ 
+</suite>
